@@ -27,7 +27,6 @@ height = (ROW_COUNT + 1) * SQUARE_SIZE
 
 # set size of GUI
 SIZE = (width, height)
-
 screen = pygame.display.set_mode(size=SIZE)
 
 
@@ -41,8 +40,7 @@ def drop_piece(board, row, col, piece):
 
 
 def is_valid_location(board, col):
-    # if this condition is true, we can drop pieces here, else the column is occupied
-    return board[ROW_COUNT-1][col] == 0
+    return board[ROW_COUNT-1][col] == 0  # if condition is true, we can drop pieces there, else the column is occupied
 
 
 def get_next_open_row(board, col):
@@ -52,8 +50,7 @@ def get_next_open_row(board, col):
 
 
 def print_board(board):
-    # np.flip() reverses the order of array elements along the specified axis, preserving the shape of the array
-    print(np.flip(board, 0))
+    print(np.flip(board, 0))  # np.flip reverses array elements order along the specified axis, preserving the shape of the array
 
 
 def winning_move(board, piece):
@@ -82,6 +79,7 @@ def winning_move(board, piece):
                 return True
 
 
+# draw GUI board
 def draw_board(board):
     for col in range(COLUMN_COUNT):
         for row in range(ROW_COUNT):
@@ -156,6 +154,8 @@ def main():
                             game_over = True
 
                 print_board(board=board)
+                print('---------------------\n')
+
                 turn += 1
                 turn %= 2
 

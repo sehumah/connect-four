@@ -173,4 +173,12 @@ def main():
 if __name__ == '__main__':
     main()
 
-# # tutorial source: https://www.askpython.com/python/examples/connect-four-game
+# tutorial source: https://www.askpython.com/python/examples/connect-four-game
+
+'''
+Future work:
+    1. modify and include AI functionality
+    2. allow multiple rounds of gameplay and display player's info and scores on screen
+    3. make an AI vs AI game
+    4. build a connect four solving engine
+'''
